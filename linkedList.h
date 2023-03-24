@@ -26,14 +26,20 @@ typedef struct LinkedList LinkedList;
  * @param lista direccion a la lista
  * @return int
  */
-int linkedListLenght(LinkedList *list) { return list->size; }
+int linkedListLenght(LinkedList *list)
+{
+  return list->size;
+}
 
 /**
  * Devuelve verdadero si la lista esta vacía
  * @param list direccion a una lista
  * @return boolean
  */
-short linkedListEmpty(LinkedList *list) { return list->nodes == NULL; }
+short linkedListEmpty(LinkedList *list)
+{
+  return list->nodes == NULL;
+}
 
 /**
  * Devuelve verdadero si la posición NO es negativa y

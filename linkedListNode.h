@@ -19,12 +19,13 @@
 
 struct LinkedListNode
 {
-  struct LinkedListNode *next;
-
   /* Propiedades */
   char title[STRING_LENGHT];
   char album[STRING_LENGHT];
   char artist[STRING_LENGHT];
+
+  /* Required */
+  struct LinkedListNode *next;
 };
 
 typedef struct LinkedListNode LinkedListNode;
