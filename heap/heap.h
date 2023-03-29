@@ -132,24 +132,21 @@ void heapInsert(Heap *heap, HeapNode *node)
 
   while (1)
   {
-
     int parentWeight = heapParentNode(heap, heapSize)->weight;
     int nodeWeight = heapGetNode(heap, heapSize)->weight;
 
     if (parentWeight <= nodeWeight)
-    {
+      /*si el nodo padre es menor o igual al nodo hijo 
+        se detiene la ejecucion */
       break;
-    }
-    else
-    {
-      /* cambiar el padre por el hijo */
-      HeapNode miss = heap->nodes[heapSize];
-      int bar = (heapSize - 1) / 2;
 
-      heap->nodes[heapSize] = heap->nodes[bar];
-      heap->nodes[bar] = miss;
+    /* cambiar el padre por el hijo */
+    HeapNode miss = heap->nodes[heapSize];
+    int bar = (heapSize - 1) / 2;
 
-      heapSize = bar;
-    }
+    heap->nodes[heapSize] = heap->nodes[bar];
+    heap->nodes[bar] = miss;
+
+    heapSize = bar;
   }
 }
