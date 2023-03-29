@@ -23,7 +23,11 @@ estaciones = {
     "kfive": set([States.TAMAULIPAS, States.YUCATAN])
 }
 
-origen = "kfour"
+origen = "kfour" # nombre de la estacion donde se quiere iniciar 
+
+
+# -----------------------------------------------------
+
 resultado = []
 visitadas = estaciones[origen]
 
