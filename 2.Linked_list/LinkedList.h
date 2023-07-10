@@ -5,8 +5,8 @@
  * lista enlazada simple.                                             *
  *********************************************************************/
 
-#ifndef linkedList
-#define linkedList
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H   
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -43,9 +43,11 @@ typedef struct List
 Node *NodeCreate(void *data)
 {
     Node *foo = (Node *)malloc(sizeof(Node));
-    // if (foo == NULL)
-    //     // Fallo al alocar memoria
-    //     return NULL;
+
+    if (foo == NULL) {
+        puts("ERROR: NodeCreate no puede reservar memoria");
+        exit(EXIT_FAILURE);
+    }
 
     foo->data = data;
     foo->next = NULL;
