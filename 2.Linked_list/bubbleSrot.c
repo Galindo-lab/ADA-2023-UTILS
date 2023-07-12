@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "LinkedList2.h"
+#include "LinkedList.h"
 
 // Función principal de Bubble Sort
 void bubbleSort(List* list)
