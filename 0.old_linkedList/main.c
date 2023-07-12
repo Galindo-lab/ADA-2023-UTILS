@@ -1,118 +1,48 @@
+#include "LinkedList2.h"
 
-#include "linkedList.h"
-#include "linkedListNode.h"
+void showList(List* list);
 
-/**
- * Longitud de la lista
- * @param direccion a la lista
- * @return numero de nodos
- */
-int len(LinkedList *list);
-
-/**
- * Crear una nueva entrada para la lista, para mas informacion consultar
- * linkedListNode.h
- */
-void append(LinkedList *list, char *title, char *album, char *artist);
-
-/**
- * Insertar un nodo en una posicion de la lista
- * @param list direccion a la lista
- * @param node direccion al nodo
- * @param posicion en la lista
- */
-void insert(LinkedList *list, LinkedListNode *node, int position);
-
-/**
- * Eliminar un nodo de la lista
- * @param list direccion a la lista
- * @param posicion en la lista
- */
-void delete(LinkedList *list, int position);
-
-/**
- * Obtener el valor de un nodo de la lista
- * @param direccion a la lista
- * @param posicion del elemento
- * @return puntero al nodo
- */
-LinkedListNode *get(LinkedList *list, int position);
-
-
-/**
- * Mostrar todos los valores del nodo
- * @param direccion al nodo
- */
-void display(LinkedListNode *node);
-
-int main(void)
+int main()
 {
-    LinkedList lista;
-    linkedListInit(&lista); // inicializar la lista 
+    List a; ListInit(&a);
 
-    append(&lista, "titulo 0", "album 0", "artist 0");
-    append(&lista, "titulo 1", "album 1", "artist 1");
+    /********************
+     * Agregar elementos
+     ********************/
+    puts("\nAgregar elementos");
 
-    printf("Nodos de prueba 1 --------------------\n");
-    for (int i = 0; i < len(&lista); i++)
+    for (int i = 0; i < 10; i++)
     {
-        display(get(&lista, i));
-        printf("\n");
+        // insertar 10 flotantes
+        ListInsert(&a, i, calloc(1, sizeof(float)));
+
+        // podemos modificar los elementos de la lista
+        float* elementValue = &LIST_GET(float, &a, i);
+
+        *elementValue = i;
     }
     
-    LinkedListNode *foo = get(&lista, 1); // guardar el valor del nodo
-    delete(&lista, 1); // eliminamos el nodo guardado
+    showList(&a);
 
-    printf("Nodos de prueba 2 -------------------\n");
-    for (int i = 0; i < len(&lista); i++)
-    {
-        display(get(&lista, i));
-        printf("\n");
-    }
+    /*********************
+     * Eliminar elementos
+     *********************/
+    puts("\nEliminar elementos");
 
-    insert(&lista, foo, 0); // insertamos el valor guardado pero ahora al inicio de la lista
+    ListRemove(&a, 3);
+    showList(&a);
 
-    printf("Nodos de prueba 3 -------------------\n");
-    for (int i = 0; i < len(&lista); i++)
-    {
-        display(get(&lista, i));
-        printf("\n");
-    }
-
-    linkedListFree(&lista); // liberamos memoria
-
+    /**
+     * Liberar memoria de la lista
+     */
+    ListFree(&a);
     return 0;
 }
 
-/**
- * Implementacion de las funciones 
-*/
-int len(LinkedList *list)
-{
-  return linkedListLenght(list);
-}
 
-void append(LinkedList *list, char *title, char *album, char *artist)
-{
-  linkedListInsertLast(list, linkedListNodeCreate(title, album, artist));
-}
-
-void insert(LinkedList *list, LinkedListNode *node, int position)
-{
-  linkedListInsert(list, node, position);
-}
-
-void delete(LinkedList *list, int position)
-{
-  linkedListRemove(list, position);
-}
-
-LinkedListNode *get(LinkedList *list, int position)
-{
-  return linkedListNodeCopy(linkedListGet(list, position));
-}
-
-void display(LinkedListNode *node)
-{
-  linkedListNodeDisplay(node);
+void showList(List* list) {
+    for (int i = 0; i < ListLength(list); i++)
+    {
+        printf("%d: %.3f\n", i, LIST_GET(float,list,i));
+    }
 }
