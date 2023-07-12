@@ -4,7 +4,7 @@
  * Metodos para capturar string de manera simple sin bugs en GBD      *
  *********************************************************************/
 
-#ifndef GRT_STR_C
+#ifndef GET_STR_C
 #define GET_STR_C
 
 #include <stdio.h>
@@ -13,6 +13,7 @@
 
 /**
  * @brief vacia el strin de manera manual
+ * 
  * @author luis Eduardo Galindo Amaya
  */
 void stdinFlush()
@@ -24,7 +25,7 @@ void stdinFlush()
 }
 
 /**
- * Validar si un caracter es alfabetico
+ * @brief Validar si un caracter es alfabetico
  */
 char isAlphabetic(unsigned int ch)
 {
