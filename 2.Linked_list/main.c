@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "LinkedList2.h"
+#include "LinkedList.h"
 
 void showList(List* list) {
     for (int i = 0; i < LIST_LEN(list); i++)
@@ -58,7 +58,7 @@ int main() {
         int removedElement = LIST_POP(int, &list);
         printf(" Elemento eliminado: %d\n", removedElement);
     }
-    printf("Longitud de la lista después de eliminar todos los elementos: %d\n", LIST_LEN(&list));
+    printf("Longitud de la lista: %d\n", LIST_LEN(&list));
     printf("Lista vacía? %s\n", LIST_EMPTY(&list) ? "Sí" : "No");
     printf("\n");
 
