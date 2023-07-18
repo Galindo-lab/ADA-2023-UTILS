@@ -1,12 +1,14 @@
-/*
- * AUTOR: Luis Eduardo Galindo Amaya                   DATE:  11-07-2023
- *
+/** 
+ * @file glsq.h
+ * @brief implementación de una lista enlazada y macros para manipularla
+ * @author Luis Eduardo Galindo Amaya
+ * @date 2023-07-11
+ * 
+ * @par README
  * Este archivo es una implementación de una lista enlazada genérica,
  * junto con macros adicionales para manipular listas como colas y
- * pilas.
- *
- * SOURCE: <https://github.com/Galindo-lab/algoritmos-utils>
-*/
+ * pilas <https://github.com/Galindo-lab/algoritmos-utils>.
+ */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -482,7 +484,7 @@ typedef List Stack;
 
 /**
  * @brief Macro para extraer el último elemento de el stack.
- *
+
  * @param TYPE Tipo al que se desea convertir el valor.
  * @param STACK Puntero a el stack.
  * @return El valor convertido al tipo especificado.

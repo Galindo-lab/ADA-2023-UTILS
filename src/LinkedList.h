@@ -3,7 +3,7 @@
 #include <assert.h>
 
 /**
- * Estructura que representa un nodo en la lista enlazada.
+ * @brief Estructura que representa un nodo en la lista enlazada.
  */
 typedef struct Node
 {
@@ -12,7 +12,7 @@ typedef struct Node
 } Node;
 
 /**
- * Estructura que representa una lista enlazada.
+ * @brief Estructura que representa una lista enlazada.
  */
 typedef struct List
 {
