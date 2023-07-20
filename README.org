@@ -1,0 +1,47 @@
+#+TITLE:  README
+#+AUTHOR: Galindo
+#+DATE:   2023-07-19
+#+OPTIONS: toc:nil ^:nil
+
+* Cosas útiles para análisis de algoritmos
+Funciones y macros de C para hacer las practicas de algoritmos mas 
+rápido, puedes encontrar ejemplos de uso dentro del los directorios 
+=test= de cada sección.
+
+** Importante
+1. Si un nombre esta en mayúsculas y con '_' es un =macro=.
+2. Si un nombre esta minúsculas y con camelCase es una =función=.
+
+** gstructs.h
+*** Listas
+- =ListInit= :: Inicializar lista
+- =ListGetNode= :: Obtiene el nodo en una posición
+- =ListInsert= :: Inserta un elemento a la lista
+- =ListRemove= :: Elimina un elemento en la lista
+- =ListFree= :: Libera la memoria de la lista
+- =LIST_EMPTY= :: Verifica sí la lista esta vacía
+- =LIST_LEN= :: obtener la longitud de la lista
+- =LIST_PUSH= :: Inserta un elemento al final
+- =LIST_POP= :: Extrae el ultimo elemento de la lista
+
+*** Colas
+- =QUEUE_INIT= :: Inicializa la lista
+- =QUEUE_ENQUEUE= :: Agrega un elemento a la cola
+- =QUEUE_DEQUEUE= :: Elimina el primer elemento
+- =QUEUE_SIZE= :: Tamaño de la cola
+- =QUEUE_FRONT= :: Primer elemento de la lista
+- =QUEUE_REAR= :: Ultimo elemento de la lista
+- =QUEUE_FREE= :: Liberar la memoria de la cola
+
+*** Pilas
+- =STACK_INIT= :: Inicializa la pila
+- =STACK_PUSH= :: Agega un elemento a la pila
+- =STACK_POP= :: Extrae un elemento de la pila
+- =STACK_TOP= :: Revisa el primer elemnto de la pila
+- =STACK_EMPTY= :: Verifica si la pila esta vacia
+- =STACK_SIZE= :: Retorna el tamaño de la pila
+- =STACK_FREE= :: Libera la memoria de la pila
+
+# ** gcapture.h
+#  - strGet
+#  - charGet
