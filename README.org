@@ -35,13 +35,17 @@ rápido, puedes encontrar ejemplos de uso dentro del los directorios
 
 *** Pilas
 - =STACK_INIT= :: Inicializa la pila
-- =STACK_PUSH= :: Agega un elemento a la pila
+- =STACK_PUSH= :: Agrega un elemento a la pila
 - =STACK_POP= :: Extrae un elemento de la pila
-- =STACK_TOP= :: Revisa el primer elemnto de la pila
-- =STACK_EMPTY= :: Verifica si la pila esta vacia
+- =STACK_TOP= :: Revisa el primer elemento de la pila
+- =STACK_EMPTY= :: Verifica si la pila esta vacía
 - =STACK_SIZE= :: Retorna el tamaño de la pila
 - =STACK_FREE= :: Libera la memoria de la pila
 
-# ** gcapture.h
-#  - strGet
-#  - charGet
+** gcapture.h
+- =flushStdinBuffer= :: Vacía el buffer de stdin
+- =isAlphabetic= :: Verifica si un carácter es un numero o una letra
+- =strUpper= :: Convierte un string a mayúscula
+- =strLower= :: Convierte un string en minúscula
+- =strGet= :: Captura un string
+- =charGet= :: Captura un char
