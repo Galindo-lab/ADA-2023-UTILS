@@ -1,4 +1,5 @@
-#include "../glsq.h"
+#include "../LinkedList.h"
+#include "../Queue.h"
 
 #include <stdio.h>
 

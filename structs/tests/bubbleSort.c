@@ -1,4 +1,4 @@
-#include "../glsq.h"
+#include "../LinkedList.h"
 
 // Función principal de Bubble Sort
 void bubbleSort(List* list)

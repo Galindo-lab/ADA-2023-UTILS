@@ -1,0 +1,11 @@
+/** 
+ * @file gcapture.h
+ * @brief Captura de strings para <www.onlinegdb.com>
+ * @author Luis Eduardo Galindo Amaya
+ * @date 2023-07-11
+ * 
+ * @par Utils
+ * Este archivo contiene metodos para hacer algunas operaciones de 
+ * captura de strings y de chars de manera más practica
+ */
+

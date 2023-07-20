@@ -1,5 +1,5 @@
 /** 
- * @file glsq.h
+ * @file gstructs.h
  * @brief implementación de una lista enlazada y macros para manipularla
  * @author Luis Eduardo Galindo Amaya
  * @date 2023-07-11

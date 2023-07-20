@@ -1,27 +1,35 @@
-/**********************************************************************
- * AUTOR: Luis Eduardo Galindo Amaya                 DATE: 09-70-2023 *
- *                                                                    *
- * Metodos para capturar string de manera simple sin bugs en GBD      *
- *********************************************************************/
-
-#ifndef GET_STR_C
-#define GET_STR_C
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 /**
- * @brief vacia el strin de manera manual
+ * @brief vacia el stdin de manera manual
  * 
  * @author luis Eduardo Galindo Amaya
  */
-void stdinFlush()
+void flushStdinBuffer()
 {
   // descarta el ultimo '\n' en stdin
   int c;
   while ((c = getchar()) != '\n' && c != EOF)
     ;
+}
+
+/**
+ * @brief Capturar string
+ * @author Luis Eduardo Galindo Amaya
+ * @param str apuntador a un array de chars
+ * @param lenght
+ */
+void strGet(char *str, int max_lenght)
+{
+  // captura el string
+  fgets(str, max_lenght, stdin);
+
+  // reemplaza el ultimo caracter con el terminador
+  char *p;
+  if ((p = strchr(str, '\n')) != NULL)
+    *p = '\0';
 }
 
 /**
@@ -60,22 +68,3 @@ void strLower(char *str)
       *i |= 32;
   }
 }
-
-/**
- * @brief Capturar string
- * @author Luis Eduardo Galindo Amaya
- * @param str apuntador a un array de chars
- * @param lenght
- */
-void strGet(char *str, int max_lenght)
-{
-  // captura el string
-  fgets(str, max_lenght, stdin);
-
-  // reemplaza el ultimo caracter con el terminador
-  char *p;
-  if ((p = strchr(str, '\n')) != NULL)
-    *p = '\0';
-}
-
-#endif

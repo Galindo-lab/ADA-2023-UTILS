@@ -52,6 +52,5 @@ typedef List Stack;
 
 /**
  * @brief Macro para liberar la memoria del stack
- * 
  */
 #define STACK_FREE(STACK) ListFree(STACK); 

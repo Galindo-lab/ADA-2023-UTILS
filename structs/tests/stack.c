@@ -1,4 +1,5 @@
-#include "../glsq.h"
+#include "../LinkedList.h"
+#include "../Stack.h"
 
 void showList(Stack* list) {
     for (int i = 0; i < LIST_LEN(list); i++)
