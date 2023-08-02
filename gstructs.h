@@ -57,7 +57,7 @@ typedef struct List
  * @return El valor convertido al tipo especificado.
  */
 #define LIST_GET(TYPE, LIST, INDEX) \
-    (*((TYPE *)(ListGetNode(LIST, INDEX)->data)))
+  (*((TYPE *)(ListGetNode(LIST, INDEX)->data)))
 
 /**
  * @brief Macro para insertar un elemento al final de la lista.
@@ -162,7 +162,7 @@ void ListInsert(List *list, int index, void *data)
         prev->next = newNode;
     }
 
-    list->length++;
+    (list->length)++;
 }
 
 /**
@@ -210,7 +210,7 @@ void ListFree(List *list)
  *
  * @param QUEUE Puntero a la cola a inicializar.
  */
-#define QUEUE_INIT(QUEUE) ListInit(STACK);
+#define QUEUE_INIT(QUEUE) ListInit(QUEUE)
 
 /**
  * @brief Agrega un elemento a la cola.
